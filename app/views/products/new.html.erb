@@ -1,0 +1,9 @@
+<h1>ユーザー登録</h1>
+<%= form_for @product, url: {action: :create} do |f| %>
+    <%= f.id %><br>
+    <%= f.label :name, '名称' %>
+    <%= f.text_field :name %><br>
+    <%= f.label :price, '価格' %>
+    <%= f.text_field :price %><br>
+    <%= f.submit '登録' %>
+<% end %>

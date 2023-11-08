@@ -1,0 +1,10 @@
+<h1>カートの中身</h1>
+<% @cartitems.each do |e| %>
+    <%= Product.find(e.product_id).id %>
+    <%= Product.find(e.product_id).name %>
+    <%= Product.find(e.product_id).price %>
+    <%= e.cty %>
+    <%=link_to '[カートから削除]', carts_path(e), data: { turbo_method: :delete } %><br>
+<% end %>
+
+<%= "合計金額" %>#<%=  %>

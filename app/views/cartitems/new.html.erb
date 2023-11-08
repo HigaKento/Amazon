@@ -1,0 +1,10 @@
+<h1>カート追加ページ</h1>
+<%= form_for @cartitem, url: {action: :create} do |f| %>
+    <%= products.name %><br>
+    <%= products.price %><br>
+    <%= Product.find(params[:name] %><br>
+    <%= Product.find(params[:price] %><br>
+    <%= f.label :, '数量' %>
+    <%= f.text_field :qty %><br>
+    <%= f.submit '登録' %>
+<% end %>
